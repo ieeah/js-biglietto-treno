@@ -9,4 +9,5 @@ body {
     display: grid;
     place-items: center;
     font-family: sans-serif;
+    height: 100vh;
 }
