@@ -29,7 +29,7 @@ if (age < 18) {
 else {
     realPrice === fullPrice;
 }
-console.log(realPrice);
+realPrice = realPrice.toFixed(2);
 
 // stampare in output il prezzo del biglietto
-document.getElementById("ticketbox").innerHTML = `Il tuo biglietto costa ${realPrice}`
+document.getElementById("ticketbox").innerHTML = `Il tuo biglietto costa ${realPrice}€`
