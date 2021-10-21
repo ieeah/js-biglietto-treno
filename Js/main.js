@@ -28,6 +28,7 @@ if ((age > 18) && (age < 65)) {
     realPrice = fullPrice / 100 * 60;
 }
 
-realPrice = realPrice.toFixed(2);
+realPrice = parseFloat(realPrice.toFixed(2));
 // stampare in output il prezzo del biglietto
 document.getElementById("ticketbox").innerHTML = `<h1>Il tuo biglietto costa ${realPrice}€</h1>`
+
