@@ -1,19 +1,20 @@
 /* TICKET PRICE CALCULATOR */
 
-// ottenere quanti chilometri si desidera percorrere e farne una costante
+// creare le due costanti che andranno inserite dai visitatori
+let kilometers;
+let age;
 
-const kilometers = parseInt( prompt("Quanti chilometri devi percorrere?") );
+// richiedere l'inserimento dei dati finché questi non siano di tipo "number"
+do {
+    kilometers = parseInt( prompt("Quanti chilometri devi percorrere?"));
+} while (isNaN(kilometers));
 
-// verificare che il dato inserito sia un numero
-if ( isNaN(kilometers) ) {
-    alert("il dato inserito non è un numero, ricarica la pagina per calcolare il prezzo del tuo biglietto!");
-}
+do {
+    age = parseInt( prompt("Quanti anni hai?"));
+} while (isNaN(age));
 
-// calcolare il prezzo del biglietto moltiplicando il numero di km per 0,21
+// calcolare il prezzo intero del biglietto moltiplicando il numero di km per 0,21
 const fullPrice = kilometers * 0.21;
-
-// ottenere età cliente
-const age = parseInt( prompt("facci sapere la tua età così possiamo applicarti un eventuale sconto?") );
 
 // se l'età del cliente è minore di 18 allora si applica uno sconto del 20%
 // se l'età del cliente è superiore ai 65 anni si applica uno sconto del 40%
